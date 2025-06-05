@@ -1,0 +1,134 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "tests",
+    "collectionId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+    "dateExported": "2025-06-05T07:34:59.156Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cbc4437a-6666-428c-829c-f33231838f14",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants",
+            "url": "http://localhost:3000/plants/3",
+            "method": "PATCH",
+            "sortNum": 10000,
+            "created": "2025-06-05T07:21:07.619Z",
+            "modified": "2025-06-05T07:21:07.619Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"körtefa\",\n    \"species\": \"öntözd\",\n    \"water_interval_days\": 4\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "dbc4d7cb-72a2-4d26-afbe-37d62f7cba63",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants",
+            "url": "http://localhost:3000/plants",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-06-05T07:21:27.638Z",
+            "modified": "2025-06-05T07:21:27.638Z",
+            "headers": []
+        },
+        {
+            "_id": "88f75698-1b9f-4843-9140-d0cbf47dd611",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants/3",
+            "url": "http://localhost:3000/plants/3",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-06-05T07:22:11.720Z",
+            "modified": "2025-06-05T07:22:11.720Z",
+            "headers": []
+        },
+        {
+            "_id": "9d443d31-ab86-4300-89e7-11d5e78a47db",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants/5",
+            "url": "http://localhost:3000/plants/5",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-06-05T07:22:51.368Z",
+            "modified": "2025-06-05T07:22:51.368Z",
+            "headers": []
+        },
+        {
+            "_id": "f49f1f96-d3e5-4fd6-9561-e3667b739f3e",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants",
+            "url": "http://localhost:3000/plants",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2025-06-05T07:24:19.084Z",
+            "modified": "2025-06-05T07:24:19.084Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"körtefa\",\n    \"species\": \"öntözd\",\n    \"water_interval_days\": 4\n  }",
+                "form": []
+            }
+        },
+        {
+            "_id": "a52e8e17-6888-4a4d-98ce-b03ac3b60426",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants/stats",
+            "url": "http://localhost:3000/stats",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-06-05T07:26:48.720Z",
+            "modified": "2025-06-05T07:26:48.720Z",
+            "headers": []
+        },
+        {
+            "_id": "cb7f666a-2299-409d-ba56-72ee62e3e1bd",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/waterings/2",
+            "url": "http://localhost:3000/waterings/2",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2025-06-05T07:33:54.193Z",
+            "modified": "2025-06-05T07:33:54.193Z",
+            "headers": []
+        },
+        {
+            "_id": "ca3a231b-55c1-4ba1-a10e-0487d1ee26bf",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/plants/1/waterings",
+            "url": "http://localhost:3000/plants/1/waterings",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-06-05T07:34:13.392Z",
+            "modified": "2025-06-05T07:34:13.392Z",
+            "headers": []
+        },
+        {
+            "_id": "378788d4-d394-45e5-94d8-4dcac134096b",
+            "colId": "eb6681d5-e766-4e4b-99fe-c76b8ee9d1e4",
+            "containerId": "",
+            "name": "http://localhost:3000/waterings",
+            "url": "http://localhost:3000/waterings",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2025-06-05T07:34:39.208Z",
+            "modified": "2025-06-05T07:34:39.208Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"plant_id\": 2,\n    \"date_watered\": \"2025-06-02T22:00:00.000Z\",\n    \"amount_ml\": 2000,\n    \"notes\": \"done\"\n  }",
+                "form": []
+            }
+        }
+    ],
+    "ref": "gaBVrs_P_EoKExIJaJmeJgpSgGAea5cvoQTwJbxzn4A7qVgyU_6FJTOj5WIvbTkTvvN0ZqWRmrvp73gTLmfJ_Q"
+}
