@@ -53,6 +53,7 @@ export default {
         this.plant.name = ''
         this.plant.species = ''
         this.plant.wateringInterval = ''
+        alert('Plant added successfully!')
       } catch (error) {
         console.error('Error adding plant:', error)
       }

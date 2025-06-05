@@ -25,6 +25,7 @@
 
 <script>
 import axios from 'axios'
+import { allowedNodeEnvironmentFlags } from 'process'
 import { RouterLink } from 'vue-router'
 
 export default {
@@ -49,6 +50,7 @@ export default {
           amount_ml: '',
           notes: '',
         }
+        alert('Watering record added successfully!')
       } catch (error) {
         console.error('Error adding watering record:', error)
         alert('Failed to add watering record. Please try again.')
