@@ -49,7 +49,7 @@ const router = createRouter({
       component: WateringsList,
     },
     {
-      path: '/WateringAdd',
+      path: '/WateringAdd/:id',
       name: 'WateringAdd',
       component: WateringAdd,
     },

@@ -36,14 +36,14 @@ export default {
   name: 'Dashboard',
   data() {
     return {
-      stats: [], // Array to store statistics
+      stats: [],
     }
   },
   methods: {
     async fetchStats() {
       try {
         const response = await axios.get('http://localhost:3000/stats')
-        this.stats = response.data // Populate stats with API response
+        this.stats = response.data
       } catch (error) {
         console.error('Error fetching statistics:', error)
         alert('Failed to load statistics. Please try again.')
@@ -51,7 +51,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchStats() // Fetch statistics when the component is mounted
+    this.fetchStats()
   },
 }
 </script>

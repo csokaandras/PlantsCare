@@ -22,7 +22,7 @@
           <td>{{ stat.water_interval_days }}</td>
           <td>
             <RouterLnk :to="'/PlantsEdit/' + stat.id">
-              <button type="button" class="btn btn-warning">Edit</button>
+              <button type="button" class="btn btn-warning">Edit</button> <!-- csak az nem működik hogy ez a gomb átvigyen, amúgy a rout az működik -->
             </RouterLnk>
             <button type="button" class="btn btn-danger" v-on:click="deletePlant(stat.id)">
               Delete
@@ -43,14 +43,14 @@ export default {
   name: 'Plants',
   data() {
     return {
-      stats: [], // Array to store statistics
+      stats: [],
     }
   },
   methods: {
     async fetchStats() {
       try {
         const response = await axios.get('http://localhost:3000/plants')
-        this.stats = response.data // Populate stats with API response
+        this.stats = response.data
       } catch (error) {
         console.error('Error fetching statistics:', error)
         alert('Failed to load statistics. Please try again.')
@@ -59,7 +59,7 @@ export default {
     async deletePlant(id) {
       try {
         await axios.delete(`http://localhost:3000/plants/${id}`)
-        this.stats = this.stats.filter((stat) => stat.id !== id) // Remove the deleted plant from the stats array
+        this.stats = this.stats.filter((stat) => stat.id !== id)
         alert('Plant deleted successfully!')
       } catch (error) {
         console.error('Error deleting plant:', error)

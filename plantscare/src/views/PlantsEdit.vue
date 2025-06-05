@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     async fetchPlant() {
-      const id = this.$route.params.id // Get the plant ID from the URL
+      const id = this.$route.params.id
       try {
         const response = await axios.get(`http://localhost:3000/plants/${id}`)
         const plantData = response.data
@@ -57,7 +57,7 @@ export default {
       }
     },
     async submitPlant() {
-      const id = this.$route.params.id // Get the plant ID from the URL
+      const id = this.$route.params.id
       try {
         await axios.patch(`http://localhost:3000/plants/${id}`, {
           name: this.plant.name,
@@ -72,7 +72,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchPlant() // Fetch the plant data when the component is mounted
+    this.fetchPlant()
   },
 }
 </script>

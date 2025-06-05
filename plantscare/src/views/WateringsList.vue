@@ -33,6 +33,9 @@
           </td>
         </tr>
       </tbody>
+      <RouterLink :to="'/WateringAdd/' + selectedPlantId">
+        <button type="button" class="btn btn-primary mt-3">Add Watering Record</button>
+      </RouterLink>
     </table>
     <p v-else>Loading watering records...</p>
   </div>
@@ -40,14 +43,15 @@
 
 <script>
 import axios from 'axios'
+import { RouterLink } from 'vue-router'
 
 export default {
-  name: 'Waterings',
+  name: 'WateringsList',
   data() {
     return {
-      waterings: [], // Array to store watering records
-      plants: [], // Array to store plants for the dropdown
-      selectedPlantId: '', // Selected plant ID from the dropdown
+      waterings: [],
+      plants: [],
+      selectedPlantId: 0,
       newWatering: {
         plant_id: '',
         date_watered: '',
@@ -59,8 +63,8 @@ export default {
   methods: {
     async fetchWaterings(selectedPlantId) {
       try {
-        const response = await axios.get('http://localhost:3000/waterings/'+selectedPlantId)
-        this.waterings = response.data // Populate waterings with API response
+        const response = await axios.get(`http://localhost:3000/plants/${selectedPlantId}/waterings`)
+        this.waterings = response.data
       } catch (error) {
         console.error('Error fetching watering records:', error)
         alert('Failed to load watering records. Please try again.')
@@ -69,7 +73,7 @@ export default {
     async fetchPlants() {
       try {
         const response = await axios.get('http://localhost:3000/plants')
-        this.plants = response.data // Populate plants with API response
+        this.plants = response.data
       } catch (error) {
         console.error('Error fetching plants:', error)
         alert('Failed to load plants. Please try again.')
@@ -78,8 +82,7 @@ export default {
     async deleteWatering(id) {
       try {
         await axios.delete(`http://localhost:3000/waterings/${id}`)
-        this.waterings = this.waterings.filter((watering) => watering.id !== id) // Remove the deleted record
-        alert('Watering record deleted successfully!')
+        this.waterings = this.waterings.filter((watering) => watering.id !== id)
       } catch (error) {
         console.error('Error deleting watering record:', error)
         alert('Failed to delete watering record. Please try again.')
@@ -87,8 +90,7 @@ export default {
     },
   },
   mounted() {
-    this.fetchWaterings() // Fetch watering records when the component is mounted
-    this.fetchPlants() // Fetch plants for the dropdown when the component is mounted
+    this.fetchPlants()
   },
 }
 </script>
