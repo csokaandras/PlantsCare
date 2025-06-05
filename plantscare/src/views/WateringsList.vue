@@ -33,11 +33,12 @@
           </td>
         </tr>
       </tbody>
-      <RouterLink :to="'/WateringAdd/' + selectedPlantId">
-        <button type="button" class="btn btn-primary mt-3">Add Watering Record</button>
-      </RouterLink>
+      
     </table>
     <p v-else>Loading watering records...</p>
+    <RouterLink v-if="selectedPlantId != 0" :to="'/WateringAdd/' + selectedPlantId">
+        <button type="button" class="btn btn-primary mt-3">Add Watering Record</button>
+      </RouterLink>
   </div>
 </template>
 
